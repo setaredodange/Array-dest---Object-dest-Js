@@ -84,3 +84,23 @@ let {name: customerName, email: customerEmail} = getCustomer(1)
 
 console.log('customername:', customerName ); //Tohid
 console.log('customeremail:', customerEmail ); //tohid@gmail.com
+
+
+
+
+/////example 5
+
+const customerIDInput= document.querySelector('#customer-id')
+
+customerIDInput.addEventListener('keypress', event => {
+    let {keyCode, target :input}= event
+
+    if(keyCode===13){
+        let {name, email}= getCustomer(input.value)
+
+
+        console.log('customername:', name);
+        console.log('customeremail:', email);
+    }
+})
+
